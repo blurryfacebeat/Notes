@@ -1,0 +1,21 @@
+button {
+    width: 100px;
+    height: 50px;
+    
+    background-color: aquamarine;
+
+    transition: all .3s linear;
+}
+
+textarea {
+    display: block;
+
+    margin-top: 30px;
+}
+
+.yellow {
+    background-color: yellow;
+    transform: scale(.9);
+
+    transition: all .3s linear;
+}
