@@ -1,0 +1,16 @@
+.box {
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    overflow-y: scroll;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+}
