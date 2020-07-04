@@ -1,0 +1,51 @@
+// Filter фильтрует массив и возвращает новый, отфильтрованный
+
+const cars = ['BMW', 'Mazda', 'Bugatti', 'Porshe'];
+const sportCar = cars.filter(car => {
+    return car.length < 6;
+});
+console.log(sportCar);
+
+// Map позволяет изменить элементы в массиве и вернуть новый с изменениями
+
+let answers = ['SaNyA', 'AnnA', 'DimoN'];
+const result = answers.map(item => item.toLowerCase());
+
+// Так же можно переписать старый массив
+answers = answers.map(item => item.toLowerCase());
+console.log(result, answers);
+
+// Every/Some (Some - перебирает массив, и если хоть один элемент подходит по
+// какому-то условию, то вернет True, иначе False)
+// Every вернет True, если все элементы совпадают, иначе False
+
+const numbers = [1, 4, 7, 8];
+const some = [2, 4, 8];
+console.log(numbers.some(item => item % 2 === 0));
+console.log(numbers.every(item => item % 2 === 0), some.every(item => item % 2 === 0));
+
+// Reduce - собирает массив в одно целое
+// sum изначально равен нулю, current - каждый последующий элемент массива, который прибавляется
+// Можно задать начальное значение для reduce .reduce((sum, current) => действие, начальное значение)
+
+const nums = [5, 6, 7, 9, 1, 6];
+const strings = ['Apple', 'Milk', 'Meat'];
+const res = nums.reduce((sum, current) => sum + current);
+const res2 = strings.reduce((sum, current) => `${sum}, ${current}`);
+console.log(res, res2);
+
+// Пример из реального кейса
+
+const obj = {
+    ivan: 'persone',
+    ann: 'persone',
+    dog: 'animal',
+    cat: 'animal'
+};
+
+// Позволяет переделать объект в матрицу
+const newArr = Object.entries(obj)
+    .filter(item => item[1] === 'persone')
+    .map(item => item[0]);
+
+console.log(newArr);
