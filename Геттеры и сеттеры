@@ -1,0 +1,20 @@
+// Свойта акцессоры get и set
+const car = {
+    name: 'BMW',
+    model: 'X5',
+    age: 10,
+
+    // Свойство геттер
+    get carAge() {
+        return this.age;
+    },
+
+    // Свойство сеттер
+    set carAge(num) {
+        this.age = num;
+    }
+};
+
+// Когда используем геттер, не ставим круглые скобки
+console.log(car.carAge);
+console.log(car.carAge = 15);
