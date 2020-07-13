@@ -5,4 +5,16 @@ const number = 3;
   let number = 2;
 }());
 
+const user = (function(){
+  const private = function() {
+    console.log('I am private!');
+  };
+  
+  return {
+    sayHello: private
+  };
+}());
+
+user.sayHello();
+
 //
