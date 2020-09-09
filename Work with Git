@@ -17,3 +17,8 @@ git add .
 git commit -m "initial example"
 4) Пушим ветку
 git push -u origin example
+
+// Возвращаемся в master ветку
+1) git checkout master
+// Делаем синхронизацию, чтобы загрузить файлы с другой ветки
+2) git pull
