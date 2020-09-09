@@ -1,0 +1,19 @@
+Создаем .gitignore
+1) Инициализируем Git
+git init
+2) Добавляем все файлы
+git add .
+3) Коммитим изменения сделанные в прошлом шаге
+git commit -m "initial"
+4) Добавляем в репозиторий 
+git remote add origin https://github.com/blurryfacebeat/example
+
+// Пример работы с новой веткой
+1) Переключаемся на работу с веткой
+git checkout - b "example"
+2) Добавляем все файлы
+git add .
+3) Коммитим изменения
+git commit -m "initial example"
+4) Пушим ветку
+git push -u origin example
