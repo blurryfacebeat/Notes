@@ -1,0 +1,16 @@
+const alice = {
+    age: 25,
+    job: 'Designer'
+}
+
+const alice2 = {
+    face: 'beautyfull',
+
+};
+
+// Копирует данные из одного объекта в другой, вместо указания ссылки на объект, в отличии от простого присваивания
+Object.assign(alice2, alice);
+
+console.log(alice2);
+-----
+{ face: 'beautiful', age: 25, job: 'Designer' }
