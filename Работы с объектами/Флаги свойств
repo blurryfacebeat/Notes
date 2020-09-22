@@ -1,0 +1,21 @@
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+const p = new Point(10, 20);
+const descriptor = Object.getOwnPropertyDescriptor(p, 'x');
+console.log(descriptor);
+
+/*
+    { value: 10, // Перезапись свойства writable: true, // Перебирается enumerable: true, // Можем удалить из объекта данное св-во. configurable: true }
+*/
+
+// Меняем флаги свойства объекта
+Object.defineProperty(p, 'x', {
+    writable: false,
+    enumerable: false,
+    configurable: false
+});
