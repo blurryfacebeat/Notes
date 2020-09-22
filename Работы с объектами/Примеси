@@ -1,0 +1,23 @@
+// Рабочий метод генерации псевдо-случайного числа
+const mix = {
+    rand(min, max) {
+        const rand = min + Math.random() * (max + 1 - min);
+        return Math.floor(rand);
+    }
+};
+
+class Rectangle {
+    constructor(x = this.rand(0, 100), width = this.rand(0, 100), height = this.rand(0, 100)) {
+        this.x = x;
+        this.width = width;
+        this.height = height;
+    }
+}
+
+// Добавляем все методы из mix в класс
+Object.assign(Rectangle.prototype, mix);
+
+const r = new Rectangle();
+console.log(r);
+
+// Rectangle { x: 23, width: 20, height: 91 }
