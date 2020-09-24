@@ -1,0 +1,42 @@
+const str = 'Слово в \'кавычках\', слэш \\ и символ unicode \u23F1  \u0BF6';
+console.log(str);
+
+// Узнать код символа по индексу
+console.log(str.codePointAt(0));
+
+// Возравщает индекс вхождения, вернет -1, если не найдено
+console.log(str.indexOf('к'));
+// параметр задает с какого индекса начать проверку
+console.log(str.indexOf('к', 25));
+
+// Вырезаем часть строки
+const str1 = 'Тестируем строки';
+// Выведет все символы, начиная с 5 индекса
+console.log(str1.slice(5));
+// С 5 по 10 не включительно
+console.log(str1.slice(5, 10));
+// Отсчитываем с конца
+console.log(str1.slice(-3, -2));
+
+/* 
+    руем строки
+    руем
+    о
+*/
+
+// Вырезает строку начиная от 5 индека и берет 6 символов
+console.log(str1.substr(5, 6));
+
+// Переводы строк в верхний и нижний регистры
+console.log(str1.toUpperCase());
+console.log(str1.toLowerCase());
+
+// Вырезает пробелы в начале и в конце строки
+string = '           fwa@mail.ru     ';
+console.log(string);
+console.log(string.trim());
+
+/*
+           fwa@mail.ru
+fwa@mail.ru
+*/
